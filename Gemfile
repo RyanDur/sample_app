@@ -27,6 +27,7 @@ group :test do
 end
 
 gem 'jquery-rails'
+gem 'rspec_org_formatter'
 
 group :production do
   gem 'pg', '0.12.2'
