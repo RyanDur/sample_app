@@ -7,7 +7,11 @@ gem 'rails', '3.2.8'
 
 group :development, 'test' do
   gem 'sqlite3'
+  gem 'guard'
   gem 'rspec-rails', '2.11.0'
+  gem 'guard-rspec', '1.2.1'
+  gem 'guard-bundler'
+  gem 'growl'
 end
 
 # Gems used only for assets and not required
@@ -23,7 +27,13 @@ group :assets do
 end
 
 group :test do
+  gem 'rspec'
+  gem 'spork-rails'
+  gem 'spork'
+  gem 'guard-spork', '1.2.0'
   gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl'
 end
 
 gem 'jquery-rails'
