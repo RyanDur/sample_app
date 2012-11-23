@@ -13,6 +13,7 @@ group :development, 'test' do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'guard-bundler'
+  gem 'guard-cucumber'
   gem 'growl'
   gem 'annotate', '2.5.0'
 end
@@ -37,6 +38,8 @@ group :test do
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'growl'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 gem 'jquery-rails'
