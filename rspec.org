@@ -1,20 +1,21 @@
 * StaticPages
 ** Home Page
-*** FAILED should have the content of 'Sample App'
-    expected there to be content "Sample App" in "SampleApp\n\nStaticPages#home\nFind me in app/views/static_pages/home.html.erb\n\n\n"
-    *Backtrace*
-    [[/Users/Thoughtworks/rails_projects/sample_app/spec/requests/static_pages_spec.rb::7][spec/requests/static_pages_spec.rb:7]] in `block (3 levels) in <top (required)>'
-    :PROPERTIES:
-      :VISIBILITY: children
-    :END:
+*** SUCCESS should have the right title
+*** SUCCESS should have the h1 'Sample App'
+** Help Page
+*** SUCCESS should have the right title
+*** SUCCESS should have the h1 'Help'
+** About Page
+*** SUCCESS should have the right title
+*** SUCCESS should have the h1 'About Us'
 * Summary
-Finished in *0.194601 seconds*
-1 example, 1 failure
+Finished in *0.184807 seconds*
+6 examples, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
   :END:
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 33304
+Randomized with seed 41259
 
