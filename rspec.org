@@ -12,7 +12,7 @@
 *** SUCCESS should has css "h1" with text "Contact"
 *** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | Contact"
 * Summary
-Finished in *0.180722 seconds*
+Finished in *0.289251 seconds*
 8 examples, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
@@ -20,5 +20,5 @@ Finished in *0.180722 seconds*
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 22302
+Randomized with seed 15469
 
