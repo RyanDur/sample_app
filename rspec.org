@@ -1,24 +1,15 @@
 * StaticPages
+** SUCCESS should have the right links on the layout
 ** Home Page
-*** SUCCESS should has css "h1" with text "Sample App"
-*** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | Home"
-** Help Page
-*** SUCCESS should has css "h1" with text "Help"
-*** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | Help"
-** About Page
-*** SUCCESS should has css "h1" with text "About Us"
-*** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | About Us"
-** Contact Page
-*** SUCCESS should has css "h1" with text "Contact"
-*** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | Contact"
+*** SUCCESS should not has css "title" with text "Home"
 * Summary
-Finished in *0.289251 seconds*
-8 examples, 0 failures
+Finished in *0.303478 seconds*
+2 examples, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
   :END:
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 15469
+Randomized with seed 47052
 
