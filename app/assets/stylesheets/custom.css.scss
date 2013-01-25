@@ -3,7 +3,7 @@
 
 /* mixins, variables, etc. */
 
-$graymediumlight: #eaeaea;
+$grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
     -moz-box-sizing: border-box;
@@ -91,7 +91,7 @@ p {
 footer {
     margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid $graymediumlight;
+    border-top: 1px solid $grayMediumLight;
     color: $grayLight;
 
     a {
