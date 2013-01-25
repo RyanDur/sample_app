@@ -6,11 +6,11 @@ Syntax error: File to import not found or unreadable: bootstrap.
         on line 1 of /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets/custom.css.scss
 
 1: @import 'bootstrap';
-2: 
+2: $grayMediumLight: #eaeaea;
 3: 
 4: /* mixins, variables, etc. */
 5: 
-6: $grayMediumLight: #eaeaea;
+6: 
 
 Backtrace:
 /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets/custom.css.scss:1
@@ -53,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: bootstrap.\A               Load paths:\A                 /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets\A                 /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets\A         on line 1 of /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets/custom.css.scss\A \A 1: @import 'bootstrap';\A 2: \A 3: \A 4: /* mixins, variables, etc. */\A 5: \A 6: $grayMediumLight: #eaeaea;"; }
+  content: "Syntax error: File to import not found or unreadable: bootstrap.\A               Load paths:\A                 /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets\A                 /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets\A         on line 1 of /Users/Thoughtworks/rails_projects/sample_app/app/assets/stylesheets/custom.css.scss\A \A 1: @import 'bootstrap';\A 2: $grayMediumLight: #eaeaea;\A 3: \A 4: /* mixins, variables, etc. */\A 5: \A 6: "; }
