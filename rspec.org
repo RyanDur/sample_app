@@ -1,15 +1,125 @@
+* ApplicationHelper
+** full_title
+*** SUCCESS should not include a bar for the home page
+*** SUCCESS should include the base title
+*** SUCCESS should include the page title
+* User
+** SUCCESS should respond to #password_digest
+** SUCCESS should respond to #email
+** SUCCESS should be valid
+** SUCCESS should respond to #remember_token
+** SUCCESS should respond to #password_confirmation
+** SUCCESS should respond to #name
+** SUCCESS should respond to #authenticate
+** SUCCESS should respond to #password
+** remember token
+*** remember_token
+**** SUCCESS should not be blank
+** when password confirmation is nil
+*** SUCCESS should not be valid
+** when password is not present
+*** SUCCESS should not be valid
+** email address with mixed case
+*** SUCCESS should be saved as all lower-case
+** when a password is to short
+*** SUCCESS should be invalid
+** when name is not present
+*** SUCCESS should not be valid
+** return value of authenticate method
+*** with valid email
+**** SUCCESS should == #<User id: 1, name: "Example user", email: "user@example.com", created_at: "2013-01-30 17:51:26", updated_at: "2013-01-30 17:51:26", password_digest: "$2a$04$mEd3KKj2JczHeXFISwIJqOoTawF4GaKiD2MhNIxfvA.j...", remember_token: "RFUygbRndVPICD06oxmhlQ">
+*** with invalid password
+**** SUCCESS should not == false
+**** SUCCESS should be false
+** when email format is valid
+*** SUCCESS should be valid
+** when email address is already taken
+*** SUCCESS should not be valid
+** when email address is already taken
+*** SUCCESS should not be valid
+** when name is to long
+*** SUCCESS should not be valid
+** when email format is invalid
+*** SUCCESS should be invalid
+** when email is not present
+*** SUCCESS should not be valid
+* AuthenticationPages
+** signin page
+*** SUCCESS should has css "h1" with text "Sign in"
+*** SUCCESS should has css "title" with text "Sign in"
+** signin
+*** after visiting another page
+**** SUCCESS should not has css "div.alert.alert-error"
+*** with valid credentials
+**** FAILED example at ./spec/requests/authentication_pages_spec.rb:30
+     undefined method `sign_in' for #<SessionsController:0x007f9c82fcb900>
+     *Backtrace*
+     [[/Users/Thoughtworks/rails_projects/sample_app/app/controllers/sessions_controller.rb::10][app/controllers/sessions_controller.rb:10]] in `create'
+     [[/Users/Thoughtworks/rails_projects/sample_app(eval)::2][eval):2]] in `click_button'
+     [[/Users/Thoughtworks/rails_projects/sample_app/spec/requests/authentication_pages_spec.rb::27][spec/requests/authentication_pages_spec.rb:27]] in `block (4 levels) in <top (required)>'
+     :PROPERTIES:
+       :VISIBILITY: children
+     :END:
+**** FAILED example at ./spec/requests/authentication_pages_spec.rb:32
+     undefined method `sign_in' for #<SessionsController:0x007f9c859d2aa0>
+     *Backtrace*
+     [[/Users/Thoughtworks/rails_projects/sample_app/app/controllers/sessions_controller.rb::10][app/controllers/sessions_controller.rb:10]] in `create'
+     [[/Users/Thoughtworks/rails_projects/sample_app(eval)::2][eval):2]] in `click_button'
+     [[/Users/Thoughtworks/rails_projects/sample_app/spec/requests/authentication_pages_spec.rb::27][spec/requests/authentication_pages_spec.rb:27]] in `block (4 levels) in <top (required)>'
+     :PROPERTIES:
+       :VISIBILITY: children
+     :END:
+**** FAILED example at ./spec/requests/authentication_pages_spec.rb:31
+     undefined method `sign_in' for #<SessionsController:0x007f9c8783e110>
+     *Backtrace*
+     [[/Users/Thoughtworks/rails_projects/sample_app/app/controllers/sessions_controller.rb::10][app/controllers/sessions_controller.rb:10]] in `create'
+     [[/Users/Thoughtworks/rails_projects/sample_app(eval)::2][eval):2]] in `click_button'
+     [[/Users/Thoughtworks/rails_projects/sample_app/spec/requests/authentication_pages_spec.rb::27][spec/requests/authentication_pages_spec.rb:27]] in `block (4 levels) in <top (required)>'
+     :PROPERTIES:
+       :VISIBILITY: children
+     :END:
+**** FAILED example at ./spec/requests/authentication_pages_spec.rb:33
+     undefined method `sign_in' for #<SessionsController:0x007f9c879ab7c8>
+     *Backtrace*
+     [[/Users/Thoughtworks/rails_projects/sample_app/app/controllers/sessions_controller.rb::10][app/controllers/sessions_controller.rb:10]] in `create'
+     [[/Users/Thoughtworks/rails_projects/sample_app(eval)::2][eval):2]] in `click_button'
+     [[/Users/Thoughtworks/rails_projects/sample_app/spec/requests/authentication_pages_spec.rb::27][spec/requests/authentication_pages_spec.rb:27]] in `block (4 levels) in <top (required)>'
+     :PROPERTIES:
+       :VISIBILITY: children
+     :END:
+*** with invalid credentials
+**** SUCCESS should has css "title" with text "Sign in"
+**** SUCCESS should has css "div.alert.alert-error" with text "Invalid"
 * StaticPages
 ** SUCCESS should have the right links on the layout
 ** Home Page
 *** SUCCESS should not has css "title" with text "Home"
+* UserPages
+** signup
+*** with invalid information
+**** SUCCESS should not create user
+**** after submission
+***** SUCCESS should has css "title" with text "Sign Up"
+***** SUCCESS should has content "error"
+*** with valid information
+**** SUCCESS should create a user
+**** after saving user
+***** SUCCESS should has css "title" with text "Example User"
+***** SUCCESS should has css "div.alert.alert-success" with text "Welcome"
+** profile page
+*** SUCCESS should has css "h1" with text "Michael Hartl"
+*** SUCCESS should has css "title" with text "Michael Hartl"
+** signup page
+*** SUCCESS should has css "h1" with text "Sign Up"
+*** SUCCESS should has css "title" with text "Ruby on Rails Tutorial Sample App | Sign Up"
 * Summary
-Finished in *0.303478 seconds*
-2 examples, 0 failures
+Finished in *0.886953 seconds*
+47 examples, 4 failures
   :PROPERTIES:
     :VISIBILITY: children
   :END:
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 47052
+Randomized with seed 21019
 
