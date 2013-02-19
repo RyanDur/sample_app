@@ -1,13 +1,14 @@
-@import 'bootstrap';
-
+@import "bootstrap";
 
 /* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
 @mixin box_sizing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 
 /* universal */
 
@@ -29,16 +30,14 @@ textarea {
 
 .center {
     text-align: center;
-
     h1 {
         margin-bottom: 10px;
     }
 }
 
-
 /* typography */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
@@ -54,13 +53,13 @@ h2 {
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
-    font-weight:normal;
+    font-weight: normal;
     color: $grayLight;
 }
 
 p {
     font-size: 1.1em;
-    line-height:1.7em;
+    line-height: 1.7em;
 }
 
 
@@ -75,38 +74,32 @@ p {
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
-    line-height: 1px;
-
+    line-height: 1;
     &:hover {
+        color: white;
         text-decoration: none;
     }
 }
-
 
 /* footer */
 
 footer {
     margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid $grayMediumLight;
     color: $grayLight;
-
     a {
         color: $gray;
-
         &:hover {
             color: $grayDarker;
         }
     }
-
     small {
         float: left;
     }
-
     ul {
         float: right;
         list-style: none;
-
         li {
             float: left;
             margin-left: 10px;
@@ -114,31 +107,37 @@ footer {
     }
 }
 
+/* miscellaneous */
+
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+}
 
 /* sidebar */
 
 aside {
     section {
-        padding: 10px, 0;
-        border-top: 1px, solid $grayLighter;
+        padding: 10px 0;
+        border-top: 1px solid $grayLighter;
         &:first-child {
             border: 0;
             padding-top: 0;
         }
-    }
-
-    span {
-        display: block;
-        margin-bottom: 3px;
-        line-height: 1;
-    }
-
-    h1 {
-        font-size: 1.4em;
-        text-align: left;
-        letter-spacing: -1px;
-        margin-bottom: 3px;
-        margin-top: 0px;
+        span {
+            display: block;
+            margin-bottom: 3px;
+            line-height: 1;
+        }
+        h1 {
+            font-size: 1.6em;
+            text-align: left;
+            letter-spacing: -1px;
+            margin-bottom: 3px;
+        }
     }
 }
 
@@ -176,19 +175,14 @@ aside {
     }
 }
 
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
-    padding: 10px;
+    height: auto;
     margin-bottom: 15px;
     @include box_sizing;
-}
-
-input {
-    height: auto !important;
 }
 
 #error_explanation {
@@ -204,14 +198,14 @@ input {
     @extend .error;
 }
 
-
 /* users index */
+
 .users {
     list-style: none;
     margin: 0;
     li {
         overflow: auto;
-        padding: 10px;
+        padding: 10px 0;
         border-top: 1px solid $grayLighter;
         &:last-child {
             border-bottom: 1px solid $grayLighter;
@@ -219,8 +213,8 @@ input {
     }
 }
 
-
 /* microposts */
+
 .microposts {
     list-style: none;
     margin: 10px 0 0 0;
@@ -230,33 +224,19 @@ input {
         border-top: 1px solid #e8e8e8;
     }
 }
-
 .content {
     display: block;
 }
-
 .timestamp {
     color: $grayLight;
 }
-
 .gravatar {
     float: left;
     margin-right: 10px;
 }
-
 aside {
     textarea {
         height: 100px;
         margin-bottom: 5px;
     }
-}
-
-/* misc. */
-
-.debug_dump {
-    clear: both;
-    float:left;
-    width: 100%;
-    margin-top: 45px;
-    @include box_sizing;
 }
